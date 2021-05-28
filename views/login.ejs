@@ -11,7 +11,7 @@
                 </div>
             <% } %>
         </div>
-        <div class="card p-5 w-50 m-auto">
+        <div class="ontainer pt-5">
             <form method="POST" action="/handleLogin">
                 <input value="<%= exist.length==0?'':exist[0].email%>" class="form-control" placeholder="Enter your email" type="text" name="email">
                 <% if (exist!=0) { %>
