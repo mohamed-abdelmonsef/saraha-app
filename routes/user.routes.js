@@ -10,7 +10,7 @@ try {
 }
 
 try {
-    app.post('/handleUser',validation ,userController.handleUser)
+    app.post('/handleUser',userController.handleUser)
 } catch (error) {
     console.log('an error in handling user',error);
 }
