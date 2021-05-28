@@ -1,5 +1,4 @@
 const app = require('express').Router()
-const validation = require('../validators/message.validation')
 const userController = require('../controllers/user.controller')
 
 
