@@ -1,5 +1,4 @@
 const messageModel = require('../models/message.model')
-const {validationResult} = require("express-validator")
 const userModel = require('../models/user.model')
 
 
@@ -14,14 +13,7 @@ module.exports.renderUser = async(req,res)=>{
 
 module.exports.handleUser = async(req,res)=>{
     const {message} = req.body
-    let errors = validationResult(req)
-    if (errors.isEmpty()) {
-        //insert in db
         await messageModel.insertMany({message ,_Id})
         res.redirect('/user/' + _Id)
-    } else {
-        //this is invalid message
-        res.redirect('/user/' + _Id)
 
-    }
 } 
