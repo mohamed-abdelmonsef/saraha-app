@@ -38,7 +38,7 @@ module.exports.handleRegister = async(req,res)=>{
                     subject: "Hello ✔", // Subject line
                     html: `
                         <div style="background-color:#bbf;color:red;padding:140px">
-                            <h1><b>Verify your email ...<br><a href="http://localhost:3000/check/${token}"> click here to confirm your email</a></h1>
+                            <h1><b>Verify your email ...<br><a href="https://moon-saraha.herokuapp.com/check/${token}"> click here to confirm your email</a></h1>
                         </div>`
                   }
                 await transporter.sendMail(options,(nodemailer_err)=>{
