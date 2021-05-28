@@ -12,7 +12,7 @@
             </div>
         <% } %>
     </div>
-    <div class="card p-5 w-50 m-auto">
+    <div class="container pt-5">
         <form method="POST" action="/handleRegister">
             <input value="<%= oldInputs.length==0?'':oldInputs[0].name%>" class="form-control" placeholder="Enter your Name" type="text" name="name">
             <% if (validErrors.find(e=>e.param=='name')) { %>
